@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>បែបបទចុះឈ្មោះរៀបអាពាហ៍ពិពាហ៍</title>
+  <style>
+    /* ស្ទីលសាមញ្ញ - សម្រាប់ការបង្ហាញ */
+    :root{
+      --bg:#f74bff;
+      --card:#ffffff;
+      --accent:#2b6cb0;
+      --danger:#e53e3e;
+      --muted:#6b7280;
+    }
+    body{
+      font-family: "Khmer OS Battambang", "Noto Sans Khmer", Arial, sans-serif;
+      background: linear-gradient(135deg, var(--bg), #eef6ff);
+      margin:0;
+      padding:24px;
+      color:#000000;
+    }
+    .container{
+      max-width:900px;
+      margin:18px auto;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(20,40,60,0.08);
+      padding:22px;
+    }
+    h1{margin:4px 0 8px; color:var(--accent);}
+    p.lead{color:var(--muted); margin-top:0;}
+    form .section{
+      border:1px dashed #e6eef8;
+      padding:14px;
+      border-radius:8px;
+      margin-bottom:12px;
+      background:#AAC245
+    }
+    label{display:block; font-weight:600; margin-bottom:6px;}
+    .hint{font-weight:400; font-size:0.95rem; color:var(--muted); margin-bottom:8px;}
+    input[type="text"], input[type="tel"], input[type="date"]{
+      width:100%;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid #d1e3f8;
+      box-sizing:border-box;
+      font-size:16px;
+      margin-bottom:10px;
+    }
+    .row{display:flex; gap:12px;}
+    .col{flex:1;}
+    button{
+      background:var(--accent);
+      color:white;
+      border:none;
+      padding:10px 18px;
+      border-radius:10px;
+      font-size:16px;
+      cursor:pointer;
+    }
+    button.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid #cfe3fb;
+    }
+    .preview{
+      margin-top:16px;
+      padding:12px;
+      background:#fbfdff;
+      border-radius:8px;
+      border:1px solid #e6f0fb;
+    }
+    .field-title{font-weight:700; color:#0b3a66; margin-top:6px;}
+    .small{font-size:0.95rem; color:var(--muted);}
+    @media(max-width:720px){
+      .row{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>អឌី បោះពុម្ព និងកុំព្យូទ័រ RDPrinting and Computer </h1>
+    <p class="lead">បែបបទព័ត៌មានអ្នករៀបអាពាហ៍ពិពាហ៍ </p>
+	  <p class="lead">សូមបំពេញព័ត៌មាននៅខាងក្រោម </p>
+	</div>
+        <div class="row">
+          <div class="col">
+            <label>ថ្ងៃខែរៀបអាពាហ៍ពិពាហ៍</label>
+            <input type="text" id="paternalFather_en" placeholder="ថ្ងៃពុធ ៩ កើត ខែអស្សុជ ឆ្នាំម្សាញ់ សប្តស័ក ពុទ្ធសករាជ ២៥៦៩ ត្រូវនឹងថ្ងៃទី១ ខែតុលា ឆ្នាំ២០២៥" />
+
+    <form id="familyForm" onsubmit="return false;">
+      <!-- 1: ឈ្មោះម្ដាយឪពុកខាងប្រុស-->
+      <div class="section">
+        <label>1) ឈ្មោះម្ដាយ និងឪពុកខាងប្រុស</label>
+        <div class="row">
+          <div class="col">
+            <label>ឪពុក</label>
+            <input type="text" id="paternalFather_kh" placeholder="ឧ. ហ៊ុន តេ" />
+          </div>
+          <div class="col">
+            <label>ម្ដាយ</label>
+            <input type="text" id="paternalMother_kh" placeholder="ឧ. ម៉េង ស្រី" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>កូនប្រុស (ខ្មែរ)</label>
+            <input type="text" id="paternalFather_en" placeholder="ឧ.ម៉េង ស្រី" />
+          </div>
+          <div class="col">
+            <label>កូនប្រុស (អង់គ្លេស)</label>
+            <input type="text" id="paternalMother_en" placeholder="e.g. Meng Srey" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: ឈ្មោះម្ដាយឪពុកខាងស្រី -->
+      <div class="section">
+        <label>2) ឈ្មោះម្ដាយ និងឪពុកខាងស្រី</label>
+        <div class="row">
+          <div class="col">
+            <label>ឪពុក</label>
+            <input type="text" id="maternalFather_kh" placeholder="ឧ. ពៅ ចាន់" />
+          </div>
+          <div class="col">
+            <label>ម្ដាយ</label>
+            <input type="text" id="maternalMother_kh" placeholder="ឧ. សុខ មនោ" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>កូនស្រី (ខ្មែរ)</label>
+            <input type="text" id="maternalFather_en" placeholder="ឧ. ម៉ម រំដួល" />
+          </div>
+          <div class="col">
+            <label>កូនស្រី (អង់គ្លេស)</label>
+			  <input type="text" id="maternalFather_en" placeholder="e.g. Morm Romduol" />
+			</div>
